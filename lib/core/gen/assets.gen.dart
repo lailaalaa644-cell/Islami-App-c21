@@ -282,6 +282,10 @@ class $AssetsImagesGen {
   AssetGenImage get mostRecentImg =>
       const AssetGenImage('assets/images/most_recent_img.png');
 
+  /// Directory path: assets/images/on_boarding
+  $AssetsImagesOnBoardingGen get onBoarding =>
+      const $AssetsImagesOnBoardingGen();
+
   /// File path: assets/images/quran_background_img.png
   AssetGenImage get quranBackgroundImg =>
       const AssetGenImage('assets/images/quran_background_img.png');
@@ -293,6 +297,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/splash_logo.svg
   SvgGenImage get splashLogo =>
       const SvgGenImage('assets/images/splash_logo.svg');
+
+  /// Directory path: assets/images/tasbeh
+  $AssetsImagesTasbehGen get tasbeh => const $AssetsImagesTasbehGen();
 
   /// List of all assets
   List<dynamic> get values => [
@@ -770,6 +777,52 @@ class $AssetsQuranGen {
     a98,
     a99,
   ];
+}
+
+class $AssetsImagesOnBoardingGen {
+  const $AssetsImagesOnBoardingGen();
+
+  /// File path: assets/images/on_boarding/2.png
+  AssetGenImage get a2 =>
+      const AssetGenImage('assets/images/on_boarding/2.png');
+
+  /// File path: assets/images/on_boarding/3.png
+  AssetGenImage get a3 =>
+      const AssetGenImage('assets/images/on_boarding/3.png');
+
+  /// File path: assets/images/on_boarding/4.png
+  AssetGenImage get a4 =>
+      const AssetGenImage('assets/images/on_boarding/4.png');
+
+  /// File path: assets/images/on_boarding/5.png
+  AssetGenImage get a5 =>
+      const AssetGenImage('assets/images/on_boarding/5.png');
+
+  /// File path: assets/images/on_boarding/tra7eb.png
+  AssetGenImage get tra7eb =>
+      const AssetGenImage('assets/images/on_boarding/tra7eb.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [a2, a3, a4, a5, tra7eb];
+}
+
+class $AssetsImagesTasbehGen {
+  const $AssetsImagesTasbehGen();
+
+  /// File path: assets/images/tasbeh/SebhaBackground.png
+  AssetGenImage get sebhaBackground =>
+      const AssetGenImage('assets/images/tasbeh/SebhaBackground.png');
+
+  /// File path: assets/images/tasbeh/SebhaBody 1.png
+  AssetGenImage get sebhaBody1 =>
+      const AssetGenImage('assets/images/tasbeh/SebhaBody 1.png');
+
+  /// File path: assets/images/tasbeh/sebhaHead.png
+  AssetGenImage get sebhaHead =>
+      const AssetGenImage('assets/images/tasbeh/sebhaHead.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [sebhaBackground, sebhaBody1, sebhaHead];
 }
 
 abstract final class Assets {

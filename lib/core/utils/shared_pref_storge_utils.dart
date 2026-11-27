@@ -17,10 +17,19 @@ abstract class SharedPrefStorgeUtils {
     await prefs.setStringList(_key, trimmed);
   }
 
- static Future<List<String>> getRecentlyList() async {
-
+  static Future<List<String>> getRecentlyList() async {
     final prefs = await SharedPreferences.getInstance();
 
-    return  prefs.getStringList(_key) ?? <String>[];
+    return prefs.getStringList(_key) ?? <String>[];
+  }
+
+  static Future<void> setbool(String key, bool value) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(key, value);
+  }
+
+  static Future<bool> getbool(String key) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(key) ?? true;
   }
 }

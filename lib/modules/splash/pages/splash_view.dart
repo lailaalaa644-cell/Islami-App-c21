@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app_c21/core/gen/assets.gen.dart';
+import 'package:islami_app_c21/core/utils/shared_pref_storge_utils.dart';
 import 'package:islami_app_c21/modules/layout/pages/layout_view.dart';
+import 'package:islami_app_c21/modules/on_boarding/all_onboarding.dart';
 
 class SplashView extends StatefulWidget {
   static const String routeName = '/splash';
@@ -21,10 +23,15 @@ class _SplashViewState extends State<SplashView> {
     /// 3- pushAndRemoveUntil
     /// 4- pop
 
-    Future.delayed(Duration(seconds: 2), () {
-      Navigator.of(
-        context,
-      ).pushNamedAndRemoveUntil(LayoutView.routeName, (route) => false);
+    Future.delayed(Duration(seconds: 2), () async {
+      bool isFirst = await SharedPrefStorgeUtils.getbool("isFirstTime");
+      isFirst
+          ? Navigator.of(
+              context,
+            ).pushNamedAndRemoveUntil(AllOnboarding.routeName, (route) => false)
+          : Navigator.of(
+              context,
+            ).pushNamedAndRemoveUntil(LayoutView.routeName, (route) => false);
     });
   }
 
