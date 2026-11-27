@@ -298,6 +298,9 @@ class $AssetsImagesGen {
   SvgGenImage get splashLogo =>
       const SvgGenImage('assets/images/splash_logo.svg');
 
+  /// Directory path: assets/images/tasbeh
+  $AssetsImagesTasbehGen get tasbeh => const $AssetsImagesTasbehGen();
+
   /// List of all assets
   List<dynamic> get values => [
     bottomDecorationImg,
@@ -801,6 +804,25 @@ class $AssetsImagesOnBoardingGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [a2, a3, a4, a5, tra7eb];
+}
+
+class $AssetsImagesTasbehGen {
+  const $AssetsImagesTasbehGen();
+
+  /// File path: assets/images/tasbeh/SebhaBackground.png
+  AssetGenImage get sebhaBackground =>
+      const AssetGenImage('assets/images/tasbeh/SebhaBackground.png');
+
+  /// File path: assets/images/tasbeh/SebhaBody 1.png
+  AssetGenImage get sebhaBody1 =>
+      const AssetGenImage('assets/images/tasbeh/SebhaBody 1.png');
+
+  /// File path: assets/images/tasbeh/sebhaHead.png
+  AssetGenImage get sebhaHead =>
+      const AssetGenImage('assets/images/tasbeh/sebhaHead.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [sebhaBackground, sebhaBody1, sebhaHead];
 }
 
 abstract final class Assets {
