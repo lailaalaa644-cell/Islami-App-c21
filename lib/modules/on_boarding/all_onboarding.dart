@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app_c21/core/gen/assets.gen.dart';
 import 'package:islami_app_c21/core/theme/app_colors.dart';
+import 'package:islami_app_c21/core/utils/shared_pref_storge_utils.dart';
 import 'package:islami_app_c21/modules/layout/pages/layout_view.dart';
 import 'package:islami_app_c21/modules/on_boarding/custom_Indicator.dart';
 import 'package:islami_app_c21/modules/on_boarding/on_boarding_page.dart';
@@ -95,7 +96,8 @@ class _AllOnboardingState extends State<AllOnboarding> {
                 Spacer(),
                 TextButton(
                   onPressed: index == 4
-                      ? () {
+                      ? () async {
+                        await SharedPrefStorgeUtils.setbool("isFirstTime", false);
                           Navigator.push(
                             context,
                             MaterialPageRoute(

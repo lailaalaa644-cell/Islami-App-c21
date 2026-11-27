@@ -5,7 +5,8 @@ import 'package:islami_app_c21/model/bottom_bar_item_data.dart';
 import 'package:islami_app_c21/modules/hadith/hadith_view.dart';
 import 'package:islami_app_c21/modules/quran/quran_view.dart';
 import 'package:islami_app_c21/modules/radio/radio_view.dart';
-import 'package:islami_app_c21/modules/tasbeh/tasbeh_view.dart';
+import 'package:islami_app_c21/modules/tasbeh/tasbeh.dart';
+
 import 'package:islami_app_c21/modules/times/times_view.dart';
 
 /// version control system
@@ -36,7 +37,7 @@ class _LayoutViewState extends State<LayoutView> {
   final List<Widget> _pages = [
     QuranView(),
     HadithView(),
-    TasbehView(),
+    Tasbeh(),
     RadioView(),
     TimesView(),
   ];
